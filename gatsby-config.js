@@ -1,10 +1,23 @@
+require('dotenv').config({
+  path: `.env.development`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Kick off your next Gatsby project with this default starter.`,
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Product'],
+        secretKey: process.env.GATSBY_STRIPE_SECRET_KEY,
+        downloadFiles: true,
+      }
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,4 +45,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
