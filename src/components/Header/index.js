@@ -1,16 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { HeaderWrapper } from './styles';
-import { Logo } from './Logo';
+import { Logo } from '../Logo';
+import { Cart } from '../Cart';
+import { StyledLink } from '../StyledLink';
 
 export function Header() {
   return (
     <HeaderWrapper>
-      <div>
-        <Link to={"/"}>
-          <Logo />
-        </Link>
-      </div>
+      <Logo />
+
+      <ul>
+        <li><StyledLink to={"/about"}>About</StyledLink></li>
+        <li><StyledLink to={"/soaps"}>Soaps</StyledLink></li>
+        <li><StyledLink to={"/contact"}>Contact</StyledLink></li>
+        <li><Cart /></li>
+      </ul>
     </HeaderWrapper>
   );
 }

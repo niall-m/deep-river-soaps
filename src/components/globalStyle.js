@@ -59,15 +59,29 @@ export const GlobalStyle = createGlobalStyle`
 
   // global styles/vars
   :root {
-    --color-primary: #c69963;
-    --color-primary-dark: #b28451;
-    --color-primary-light: #f4ece2;
-    --color-secondary: #122e6e;
-    --color-secondary-dark: #101d2c;
-    --color-grey-light-1: #f9f7f6;
-    --color-grey-light-2: #aaa;
-    --color-grey-dark-1: #54483a;
-    --color-grey-dark-2: #6d5d4b;
+    --color-primary: #39406C;
+    --color-primary-light-1: #787EA0;
+    --color-primary-light-2: #525983;
+    --color-primary-dark-1: #252C58;
+    --color-primary-dark-2: #121840;
+    
+    --color-complementary: #9D8548;
+    --color-complementary-light-1: #E9D6A7;
+    --color-complementary-light-2: #BFA86D;
+    --color-complementary-dark-1: #81682A;
+    --color-complementary-dark-2: #5D4710;
+
+    --color-secondary: #9D7548;
+    --color-secondary-light-1: #E9CAA7;
+    --color-secondary-light-2: #BF986D;
+    --color-secondary-dark-1: #81582A;
+    --color-secondary-dark-2: #5D3810;
+    
+    --color-tertiary: #9D9348;
+    --color-tertiary-light-1: #E9E1A7;
+    --color-tertiary-light-2: #BFB56D;
+    --color-tertiary-dark-1: #81762A;
+    --color-tertiary-dark-2: #5D5310;
   }
   h1 {
     font-size: 6rem;
