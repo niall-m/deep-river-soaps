@@ -74,4 +74,7 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: 1.5rem;
     text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 30%);
   }
+  p {
+    font-family: "HandNote";
+  }
 `;
