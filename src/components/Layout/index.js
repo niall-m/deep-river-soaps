@@ -1,13 +1,13 @@
 import React from 'react';
-import { LayoutContainer } from './styles';
+import { LayoutWrapper } from './styles';
+import { Header } from '../Header';
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <LayoutContainer>
-        <main>{children}</main>
-      </LayoutContainer>
-    </>
+    <LayoutWrapper>
+      <Header />
+      <main>{children}</main>
+    </LayoutWrapper>
   );
 };
 
