@@ -13,21 +13,23 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data } = await graphql(`
     {
-      allStripeProduct {
+      allStripePrice {
         edges {
           node {
-            name
             id
+            product {
+              name
+            }
           }
         }
       }
     }
   `);
 
-  data.allStripeProduct.edges.forEach(({ node }) => {
+  data.allStripePrice.edges.forEach(({ node }) => {
     createPage({
-      path: `products/${node.name}`,
-      context: { stripeId: node.id },
+      path: `products/${node.product.name}`,
+      context: { stripePriceId: node.id },
       component: path.resolve('./src/templates/ProductTemplate/index.js')
     });
   });

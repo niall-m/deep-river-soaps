@@ -83,12 +83,22 @@ export const GlobalStyle = createGlobalStyle`
     --color-tertiary-dark-1: #81762A;
     --color-tertiary-dark-2: #5D5310;
   }
+  ::selection {
+    background-color: var(--color-complementary-light-2);
+  }
   h1 {
     font-size: 6rem;
     letter-spacing: 1.5rem;
     text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 30%);
   }
+  h2 {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 30%);
+  }
   p {
     font-family: "HandNote";
+    font-size: 1.8rem;
+    line-height: 2;
   }
 `;

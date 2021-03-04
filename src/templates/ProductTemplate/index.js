@@ -1,17 +1,27 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { Layout, SEO } from 'components';
+import { Layout, SEO, AddToCart } from 'components';
+import { 
+  Title,
+  ImgWrapper, 
+  Price,
+  LeftColumn,
+} from './styles';
 
 export const query = graphql`
-  query ProductQuery($stripeId: String) {
-    stripeProduct(id: {eq: $stripeId}) {
-      name
-      description
-      localFiles {
-        childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid_withWebp
+  query ProductQuery($stripePriceId: String) {
+    stripePrice(id: {eq: $stripePriceId}) {
+      id
+      unit_amount
+      product {
+        name
+        description
+        localFiles {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
           }
         }
       }
@@ -19,18 +29,27 @@ export const query = graphql`
   }
 `;
 
-export default function ProductTemplate({ data }) {
-  console.log(data.stripeProduct.localFiles);
-
+export default function ProductTemplate({ data: { stripePrice } }) {
+  console.log(stripePrice);
   return (
     <Layout>
       <SEO 
-        title={data.stripeProduct.name} 
-        description={data.stripeProduct.description}
+        title={stripePrice.product.name} 
+        description={stripePrice.product.description}
       />
-      <h1>{data.stripeProduct.name}</h1>
-      <p>{data.stripeProduct.description}</p>
-      <Image fluid={data.stripeProduct.localFiles[0].childImageSharp.fluid} />
+
+      <Title>{stripePrice.product.name}</Title>
+      <LeftColumn>
+        <AddToCart />
+        <p>{stripePrice.product.description}</p>
+        <Price>${stripePrice.unit_amount / 100}<sup>.00</sup></Price>
+      </LeftColumn>
+      <ImgWrapper>
+        <Image 
+          style={{ maxHeight: "55vh" }}
+          fluid={stripePrice.product.localFiles[0].childImageSharp.fluid} 
+        />
+      </ImgWrapper>
     </Layout>
   );
 }
