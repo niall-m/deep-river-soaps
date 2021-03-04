@@ -89,7 +89,7 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: 6rem;
     letter-spacing: 1.5rem;
-    text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 30%);
+    text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 80%);
   }
   h2 {
     font-size: 5rem;

@@ -4,7 +4,6 @@ export const AddToCartWrapper = styled.div`
   > form { 
     display: flex;
     justify-content: space-evenly;
-    /* flex-direction: column; */
     padding: 1rem;
   }
 `;
@@ -17,6 +16,7 @@ export const Input = styled.input`
   text-align: center;
   border: none;
   border-radius: .5rem;
+  color: currentColor;
   background-color: var(--color-tertiary-light-2);
   transition: all .1s;
 
@@ -32,6 +32,7 @@ export const Button = styled.button`
   font-family: 'AlwaysHere';
   font-weight: bold;
   border-radius: .5rem;
+  color: currentColor;
   background-color: var(--color-tertiary-light-2);
   border: none;
   padding: 1rem;

@@ -13,5 +13,7 @@ export const Grid = styled.main`
     repeat(8, [col-start] minmax(min-content, 20rem) [col-end]) 
     minmax(4vw, 1fr) [full-end];
   align-items: center;
+
+  color: var(--color-primary-dark-2);
   background-color: var(--color-secondary-light-1);
 `;
