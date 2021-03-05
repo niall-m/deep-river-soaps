@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import Image from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import { LogoWrapper } from './styles';
 
@@ -18,7 +18,7 @@ export function Logo() {
 
   return (
     <LogoWrapper>
-      <Img fluid={file.childImageSharp.fluid} />
+      <Image fluid={file.childImageSharp.fluid} />
     </LogoWrapper>
   );
 }

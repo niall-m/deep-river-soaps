@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data } = await graphql(`
     {
-      allStripePrice {
+      allStripePrice(filter: { active: { eq: true }}) {
         edges {
           node {
             id

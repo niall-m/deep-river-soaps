@@ -16,13 +16,14 @@ export const Input = styled.input`
   text-align: center;
   border: none;
   border-radius: .5rem;
-  color: currentColor;
-  background-color: var(--color-tertiary-light-2);
+  color: var(--color-secondary-light-1);
+  background-color: var(--color-primary-dark-2);
   transition: all .1s;
 
   &:focus {
     outline: none;
-    box-shadow: 1rem 1rem 1rem rgba(0,0,0,.2);
+    color: var(--color-secondary-light-2);
+    background-color: var(--color-primary-dark-1);
   }
 `;
 
@@ -32,19 +33,20 @@ export const Button = styled.button`
   font-family: 'AlwaysHere';
   font-weight: bold;
   border-radius: .5rem;
-  color: currentColor;
-  background-color: var(--color-tertiary-light-2);
+  color: var(--color-secondary-light-1);
+  background-color: var(--color-primary-dark-2);
   border: none;
   padding: 1rem;
   cursor: pointer;
   transition: all .1s;
 
   &:hover {
-    box-shadow: 1rem 1rem 1rem rgba(0,0,0,.2);
+    color: var(--color-secondary-light-2);
+    background-color: var(--color-primary-dark-1);
   }
 
   &:active {
-    box-shadow: .5rem .5rem .5rem rgba(0,0,0,.3);
+    transform: scale(.9);
   }
 
   &:focus {

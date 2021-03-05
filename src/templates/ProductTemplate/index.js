@@ -30,7 +30,6 @@ export const query = graphql`
 `;
 
 export default function ProductTemplate({ data: { stripePrice } }) {
-  console.log(stripePrice);
   return (
     <Layout>
       <SEO 

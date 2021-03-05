@@ -85,16 +85,21 @@ export const GlobalStyle = createGlobalStyle`
   }
   ::selection {
     background-color: var(--color-complementary-light-2);
+    color: var(--color-primary-dark-2);
   }
   h1 {
     font-size: 6rem;
     letter-spacing: 1.5rem;
-    text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 80%);
+    text-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 80%);
   }
   h2 {
     font-size: 5rem;
     letter-spacing: 1rem;
-    text-shadow: 0.5rem 0.5rem .5rem rgb(0 0 0 / 30%);
+    text-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 30%);
+  }
+  h3 {
+    font-size: 2.1rem;
+    letter-spacing: .3rem;
   }
   p {
     font-family: "HandNote";
