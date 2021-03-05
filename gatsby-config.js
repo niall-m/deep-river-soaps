@@ -3,6 +3,9 @@ require('dotenv').config({
 });
 
 module.exports = {
+  flags: {
+    DEV_SSR: false
+  },
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next Gatsby project with this default starter.`,
@@ -13,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ['Price'],
-        secretKey: process.env.GATSBY_STRIPE_SECRET_KEY,
+        secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: true,
       }
     },

@@ -1,10 +1,13 @@
 import React from 'react';
 import { GlobalStyle } from './src/components/globalStyle';
 import { ProductContextProvider } from './src/context/ProductContext';
+import { CartContextProvider } from './src/context/CartContext';
 
 export const wrapRootElement = ({ element }) => (
   <ProductContextProvider>
-    {element}
+    <CartContextProvider>
+      {element}
+    </CartContextProvider>
   </ProductContextProvider>
 );
 

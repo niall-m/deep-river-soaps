@@ -12,6 +12,7 @@ export function ProductContextProvider({ children }) {
         edges {
           node {
             id
+            currency
             unit_amount
             product {
               id

@@ -13,8 +13,10 @@ export const query = graphql`
   query ProductQuery($stripePriceId: String) {
     stripePrice(id: {eq: $stripePriceId}) {
       id
+      currency
       unit_amount
       product {
+        id
         name
         description
         localFiles {
@@ -39,9 +41,15 @@ export default function ProductTemplate({ data: { stripePrice } }) {
 
       <Title>{stripePrice.product.name}</Title>
       <LeftColumn>
-        <AddToCart />
+        <AddToCart 
+          name={stripePrice.product.name}
+          id={stripePrice.product.id}
+          price={stripePrice.unit_amount}
+          currency={stripePrice.currency}
+          image={stripePrice.product.localFiles[0].childImageSharp.fluid.src}
+        />
         <p>{stripePrice.product.description}</p>
-        <Price>${stripePrice.unit_amount / 100}<sup>.00</sup></Price>
+        <Price>${stripePrice.unit_amount / 100}.00</Price>
       </LeftColumn>
       <ImgWrapper>
         <Image 

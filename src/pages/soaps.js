@@ -21,8 +21,8 @@ const Soaps = () => {
       <SEO title="Soaps" description="All soap products page"/>
 
       <ContentGrid>
-        {products.map(product => (
-          <ProductTile product={product} key={product.id} />
+        {products.map(node => (
+          <ProductTile product={node} key={node.product.id} />
         ))}
       </ContentGrid>
     </Layout>

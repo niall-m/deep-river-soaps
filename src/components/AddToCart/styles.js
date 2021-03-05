@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const AddToCartWrapper = styled.div`
-  > form { 
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
-  }
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
 `;
 
 export const Input = styled.input`
