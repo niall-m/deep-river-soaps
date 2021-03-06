@@ -31,7 +31,7 @@ export function ProductTile({ product }) {
         id={item.id}
         price={unitAmount}
         currency="USD"
-        image={item.localFiles[0].childImageSharp.fluid.srcWebp}      
+        image={item.localFiles[0].childImageSharp.fluid}      
       />
     </ProductTileWrapper>
   );

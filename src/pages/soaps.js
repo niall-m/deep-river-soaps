@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Layout, SEO, ProductTile } from 'components';
 import ProductContext from 'context/ProductContext';
 
-const ContentGrid = styled.div`
+const SoapsGrid = styled.div`
   grid-column: col-start 1 / col-end 8;
   
   display: grid;
@@ -20,11 +20,11 @@ const Soaps = () => {
     <Layout>
       <SEO title="Soaps" description="All soap products page"/>
 
-      <ContentGrid>
+      <SoapsGrid>
         {products.map(node => (
           <ProductTile product={node} key={node.product.id} />
         ))}
-      </ContentGrid>
+      </SoapsGrid>
     </Layout>
   );
 };

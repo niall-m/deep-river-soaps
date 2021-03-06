@@ -46,7 +46,7 @@ export default function ProductTemplate({ data: { stripePrice } }) {
           id={stripePrice.product.id}
           price={stripePrice.unit_amount}
           currency={stripePrice.currency}
-          image={stripePrice.product.localFiles[0].childImageSharp.fluid.src}
+          image={stripePrice.product.localFiles[0].childImageSharp.fluid}
         />
         <p>{stripePrice.product.description}</p>
         <Price>${stripePrice.unit_amount / 100}.00</Price>
