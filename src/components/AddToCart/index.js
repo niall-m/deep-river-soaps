@@ -5,15 +5,18 @@ import { AddToCartWrapper, Input, Button } from './styles';
 export function AddToCart(props) {
   const { addItem, cartDetails } = useShoppingCart();
   const [quantity, setQuantity] = React.useState(1);
+  const [amountInCart, setAmountInCart] = React.useState(
+    cartDetails[props.id] ? cartDetails[props.id].quantity : null
+  );
+
   
   const handleChange = (e) => {
     setQuantity(parseInt(e.currentTarget.value), 10);
   };
-
+  
   React.useEffect(() => {
-    if (cartDetails[props.id]) {
-      setQuantity(cartDetails[props.id].quantity);
-    }
+    console.log('yes', cartDetails[props.id]?.quantity);
+      setAmountInCart(cartDetails[props.id]?.quantity);
   }, [cartDetails]);
 
   return (
@@ -25,6 +28,7 @@ export function AddToCart(props) {
       <Button onClick={() => addItem(props, quantity)}>
         Add to cart
       </Button>
+      {amountInCart > 0 ? <p>{amountInCart} in cart</p> : <p>0 in cart</p>}
     </AddToCartWrapper>
   );
 }
