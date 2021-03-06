@@ -7,16 +7,18 @@ export function AddToCart(props) {
   const [quantity, setQuantity] = React.useState(1);
   
   const handleChange = (e) => {
-    setQuantity(e.currentTarget.value);
+    setQuantity(parseInt(e.currentTarget.value), 10);
   };
-  
+
   return (
     <AddToCartWrapper>
       <Input type="number" min="1" 
         step="1" value={quantity} 
         onChange={handleChange}
       />
-      <Button onClick={() => addItem(props, quantity)}>Add to cart</Button>
+      <Button onClick={() => addItem(props, quantity)}>
+        Add to cart
+      </Button>
     </AddToCartWrapper>
   );
 }

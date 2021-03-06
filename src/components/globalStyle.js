@@ -101,6 +101,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 2.1rem;
     letter-spacing: .3rem;
   }
+  h4 {
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+  }
   p {
     font-family: "HandNote";
     font-size: 1.8rem;
