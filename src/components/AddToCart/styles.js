@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const AddToCartWrapper = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 1rem 0;
 `;
 
 export const Input = styled.input`
-  width: 20%;
+  height: 100%;
+  width: 50%;
   font-size: 2rem;
   font-family: 'AlwaysHere';
   font-weight: bold;
@@ -26,7 +29,8 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 50%;
+  width: 100%;
+  height: 100%;
   font-size: 1.4rem;
   font-family: 'AlwaysHere';
   font-weight: bold;

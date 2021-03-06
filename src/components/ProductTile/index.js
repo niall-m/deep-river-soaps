@@ -14,7 +14,7 @@ export function ProductTile({ product }) {
           fluid={item.localFiles[0].childImageSharp.fluid}
           style={{ 
             borderRadius: "2rem",
-            width: "40vw",
+            width: "100%",
             height: "40vh",
             cursor: "pointer"
           }}

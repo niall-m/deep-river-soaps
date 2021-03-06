@@ -1,10 +1,7 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
-import { 
-  useShoppingCart, 
-  formatCurrencyString 
-} from 'use-shopping-cart';
+import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import { FaTrash } from 'react-icons/fa';
 import { Layout, SEO } from 'components';
 
@@ -61,6 +58,10 @@ const DeleteButton = styled.button`
   &:focus {
     outline: none;
   }
+`;
+
+const Empty = styled.p`
+  text-align: center;
 `;
 
 const Cart = () => {
@@ -125,15 +126,17 @@ const Cart = () => {
     <Layout>
     <SEO title="Cart" description="Cart page"/>
     <CartGrid>
-      <CartHeader>
-        <h3>Product</h3>
-        <h3>Unit Price</h3>
-        <h3>Quantity</h3>
-        <h3>Amount</h3>
-      </CartHeader>
-      {entries.length ? 
-        entries : 
-        <p>You currently don't have any items in your cart.</p>
+      {entries.length ?
+        <>
+          <CartHeader>
+            <h3>Product</h3>
+            <h3>Unit Price</h3>
+            <h3>Quantity</h3>
+            <h3>Amount</h3>
+          </CartHeader>
+          {entries}
+        </>
+        : <Empty>You currently don't have any items in your cart.</Empty>
       }
     </CartGrid>
   </Layout>

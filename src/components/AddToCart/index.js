@@ -16,7 +16,7 @@ export function AddToCart(props) {
 
   React.useEffect(() => {
     setAmountInCart(cartDetails[props.id]?.quantity);
-  }, [cartDetails]);
+  }, [cartDetails, props.id]);
 
   return (
     <AddToCartWrapper>
@@ -27,7 +27,9 @@ export function AddToCart(props) {
       <Button onClick={() => addItem(props, quantity)}>
         Add to cart
       </Button>
-      {amountInCart > 0 ? <p>{amountInCart} in cart</p> : <p>0 in cart</p>}
+      {amountInCart > 0 
+      ? <p>{amountInCart} in cart</p> 
+      : <p>0 in cart</p>}
     </AddToCartWrapper>
   );
 }
