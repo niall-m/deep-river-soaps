@@ -13,10 +13,9 @@ export function AddToCart(props) {
   const handleChange = (e) => {
     setQuantity(parseInt(e.currentTarget.value), 10);
   };
-  
+
   React.useEffect(() => {
-    console.log('yes', cartDetails[props.id]?.quantity);
-      setAmountInCart(cartDetails[props.id]?.quantity);
+    setAmountInCart(cartDetails[props.id]?.quantity);
   }, [cartDetails]);
 
   return (
