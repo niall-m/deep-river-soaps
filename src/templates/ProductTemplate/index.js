@@ -41,6 +41,8 @@ export default function ProductTemplate({ data: { stripePrice } }) {
 
       <Title>{stripePrice.product.name}</Title>
       <LeftColumn>
+        <Price>${stripePrice.unit_amount / 100}.00</Price>
+        <p>{stripePrice.product.description}</p>
         <AddToCart 
           name={stripePrice.product.name}
           id={stripePrice.product.id}
@@ -48,8 +50,6 @@ export default function ProductTemplate({ data: { stripePrice } }) {
           currency={stripePrice.currency}
           image={stripePrice.product.localFiles[0].childImageSharp.fluid}
         />
-        <p>{stripePrice.product.description}</p>
-        <Price>${stripePrice.unit_amount / 100}.00</Price>
       </LeftColumn>
       <ImgWrapper>
         <Image 

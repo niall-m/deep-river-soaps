@@ -23,10 +23,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font: inherit;
     vertical-align: baseline;
-
-    @media only screen and (max-width: 50em) {
-      font-size: 50%;
-    }
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
@@ -82,28 +78,55 @@ export const GlobalStyle = createGlobalStyle`
     --color-tertiary-light-2: #BFB56D;
     --color-tertiary-dark-1: #81762A;
     --color-tertiary-dark-2: #5D5310;
+
+    --color-grey-light: #DCDCDC;
+
+    // responsive breakpoints
+    --bp-largest: 75em; // 1200px
+    --bp-large: 62.5em; // 1000px
+    --bp-medium: 50em; // 800px
+    --bp-small: 37.5em; // 600px
   }
   ::selection {
-    background-color: var(--color-complementary-light-2);
-    color: var(--color-primary-dark-2);
+    background-color: var(--color-primary-dark-2);
+    color: var(--color-grey-light);
   }
   h1 {
     font-size: 6rem;
     letter-spacing: 1.5rem;
     text-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 80%);
+
+    @media only screen and (max-width: 50em) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
   }
   h2 {
     font-size: 5rem;
     letter-spacing: 1rem;
-    text-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 30%);
+    text-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 50%);
+
+    @media only screen and (max-width: 50em) {
+      font-size: 3.6rem;
+      letter-spacing: .5rem;
+    }
   }
   h3 {
     font-size: 2.1rem;
-    letter-spacing: .3rem;
+    letter-spacing: .1rem;
+
+    @media only screen and (max-width: 50em) {
+      font-size: 1.4rem;
+      letter-spacing: 0;
+    }
   }
   h4 {
     font-size: 1.8rem;
     letter-spacing: .1rem;
+
+    @media only screen and (max-width: 50em) {
+      font-size: 1rem;
+    }
   }
   p {
     font-family: "HandNote";

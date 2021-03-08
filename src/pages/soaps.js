@@ -7,10 +7,14 @@ const SoapsGrid = styled.div`
   grid-column: col-start 1 / col-end 8;
   
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-gap: 3rem;
   justify-items: center;
   padding: 2rem 0;
+
+  @media only screen and (max-width: 37.5em) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Soaps = () => {

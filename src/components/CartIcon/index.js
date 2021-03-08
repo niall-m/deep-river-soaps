@@ -9,7 +9,7 @@ export function CartIcon() {
   return (
     <CartWrapper>
       <h4>{cartCount}</h4>
-      <FaShoppingCart size="3rem" />
+      <FaShoppingCart />
     </CartWrapper>
   );
 }

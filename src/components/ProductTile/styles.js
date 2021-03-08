@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ProductTileWrapper = styled.div`
   border-radius: 2rem;
   transition: all .2s;
+  width: 100%;
 
   &:hover {
     box-shadow: 1rem 1rem 1rem rgba(0,0,0,.2);

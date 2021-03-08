@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import { StyledLink } from '../StyledLink';
 
 export const HeaderWrapper = styled.header`
-  padding: 0 2rem;
   background-color: var(--color-primary-dark-2);
+  padding-left: 3vw;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 1rem;
   align-items: center;
-  justify-content: space-between;
 
   > ul {
     display: grid;
-    grid-template-columns: repeat(4, min-content);
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     align-items: center;
     justify-items: center;
 
@@ -28,7 +28,12 @@ export const HeaderWrapper = styled.header`
       &:hover {
         color: var(--color-secondary-light-2);
         background-color: var(--color-primary-dark-1);
-        transform: scale(1.2);
+        transform: scale(1.1);
+      }
+
+      @media only screen and (max-width: 50em) {
+        font-size: 1.4rem;
+        padding: .5rem;
       }
     }
   }

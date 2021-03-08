@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const AddToCartWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   align-items: center;
   justify-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
 `;
 
 export const Input = styled.input`
-  height: 100%;
-  width: 50%;
+  height: 3rem;
+  width: 5rem;
   font-size: 2rem;
   font-family: 'AlwaysHere';
   font-weight: bold;
@@ -29,7 +29,6 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 100%;
   height: 100%;
   font-size: 1.4rem;
   font-family: 'AlwaysHere';
@@ -54,4 +53,5 @@ export const Button = styled.button`
   &:focus {
     outline: none;
   }
+
 `;

@@ -42,14 +42,10 @@ const QuantityAdder = styled.div`
 
 const DeleteButton = styled.button`
   border: none;
-  color: var(--color-tertiary-dark-2);
+  color: var(--color-primary-dark-2);
   background-color: transparent;
   cursor: pointer;
   transition: all .1s;
-
-  &:hover {
-    color: var(--color-primary);
-  }
 
   &:active {
     transform: scale(.9);

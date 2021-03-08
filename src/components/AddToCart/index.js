@@ -29,7 +29,7 @@ export function AddToCart(props) {
       </Button>
       {amountInCart > 0 
       ? <p>{amountInCart} in cart</p> 
-      : <p>0 in cart</p>}
+      : null}
     </AddToCartWrapper>
   );
 }
