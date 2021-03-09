@@ -35,8 +35,24 @@ const QuantityAdder = styled.div`
   display: flex;
   align-items: center;
 
-  > label {
-    margin: 0 1rem 0 0;
+  > select {
+    padding: .5rem;
+    font-family: 'AlwaysHere';
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .5rem;
+    color: var(--color-primary-dark-2);
+    background-color: var(--color-secondary-light-1);
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    @media only screen and (max-width: 50em) {
+      font-size: 1.2rem;
+      padding: .2rem;
+    }
   }
 `;
 
@@ -56,10 +72,6 @@ const DeleteButton = styled.button`
   }
 `;
 
-const Empty = styled.p`
-  text-align: center;
-`;
-
 const Cart = () => {
   const { cartDetails, removeItem, setItemQuantity } = useShoppingCart();
 
@@ -70,7 +82,7 @@ const Cart = () => {
       const entry = cartDetails[productId];
 
       const options = [];
-      for (let quantity = 1; quantity <= 20; ++quantity) {
+      for (let quantity = 1; quantity <= 12; ++quantity) {
         options.push(<option key={quantity} value={quantity}>{quantity}</option>);
       }
       
@@ -98,7 +110,6 @@ const Cart = () => {
           
           <QuantityAdder>
             <select
-              id="quantity-select"
               defaultValue={entry.quantity}
               onChange={(e) => {
                 setItemQuantity(productId, e.target.value);
@@ -132,7 +143,7 @@ const Cart = () => {
           </CartHeader>
           {entries}
         </>
-        : <Empty>You currently don't have any items in your cart.</Empty>
+        : <p>You currently don't have any items in your cart.</p>
       }
     </CartGrid>
   </Layout>
