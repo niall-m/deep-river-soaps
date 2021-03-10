@@ -12,9 +12,13 @@ export const HeaderWrapper = styled.header`
 
   > ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
     align-items: center;
     justify-items: center;
+
+    @media only screen and (max-width: 380px) {
+      grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    }
 
     ${StyledLink} {
       color: var(--color-secondary-light-1);
@@ -25,15 +29,15 @@ export const HeaderWrapper = styled.header`
       border-radius: 1rem;
       transition: all .3s;
 
+      @media only screen and (max-width: 50em) {
+        font-size: 1.4rem;
+        padding: .5rem;
+      }
+
       &:hover {
         color: var(--color-secondary-light-2);
         background-color: var(--color-primary-dark-1);
         transform: scale(1.1);
-      }
-
-      @media only screen and (max-width: 50em) {
-        font-size: 1.4rem;
-        padding: .5rem;
       }
     }
   }

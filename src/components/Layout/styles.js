@@ -14,7 +14,6 @@ export const Grid = styled.main`
     minmax(4vw, 1fr) [full-end];
   grid-row-gap: 1rem;
   align-items: center;
-  padding: 1rem;
 
   color: var(--color-primary-dark-2);
   background-color: var(--color-grey-light);

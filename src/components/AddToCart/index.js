@@ -8,7 +8,6 @@ export function AddToCart(props) {
   const [amountInCart, setAmountInCart] = React.useState(
     cartDetails[props.id] ? cartDetails[props.id].quantity : null
   );
-
   
   const handleChange = (e) => {
     setQuantity(parseInt(e.currentTarget.value), 10);
