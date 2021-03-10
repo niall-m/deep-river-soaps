@@ -4,17 +4,17 @@ import BackgroundImage from 'gatsby-background-image';
 import { TextWrapper } from './styles';
 import styled from 'styled-components';
 
-const StyledBackground = styled(BackgroundImage)`
-  &::before,
-  &::after {
-    border-radius: 1rem;
-  }
-`;
+// const StyledBackground = styled(BackgroundImage)`
+//   &::before,
+//   &::after {
+//     border-radius: 1rem;
+//   }
+// `;
 
 export const SplashBackground = () => {
   const { file } = useStaticQuery(graphql`
     query {
-      file(relativePath: {eq: "deeprivermap.jpg"}) {
+      file(relativePath: {eq: "map.png"}) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -25,20 +25,20 @@ export const SplashBackground = () => {
   `);
 
   return (
-    <StyledBackground
+    <BackgroundImage
       fluid={file.childImageSharp.fluid}
       style={{ 
-        borderRadius: "1rem", // doesn't work
         height: "100%",
         width: "100%",
         gridColumn: "full-start / full-end",
+        // borderRadius: "1rem", // doesn't work
       }}
     >
-      <TextWrapper>
+      {/* <TextWrapper>
         <h1>Deep</h1>
         <h1>River</h1>
         <h1>Soaps</h1>
-      </TextWrapper>
-    </StyledBackground>
+      </TextWrapper> */}
+    </BackgroundImage>
   );
 };

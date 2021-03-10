@@ -12,7 +12,7 @@ export const LocalImage = ({ src, ...rest }) => {
           node {
             relativePath
             childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
+              fluid(maxHeight: 800, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

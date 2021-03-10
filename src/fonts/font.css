@@ -7,3 +7,8 @@
   font-family: "HandNote";
   src: url("./HandNote.otf");
 }
+
+@font-face {
+  font-family: "CalendasPlus";
+  src: url("./calendas_plus-webfont.ttf");
+}

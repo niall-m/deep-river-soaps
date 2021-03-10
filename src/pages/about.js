@@ -11,8 +11,8 @@ const AboutGrid = styled.div`
   padding: 2rem 0;
 
   > p {
-    font-family: "Open Sans";
-    font-size: 1rem;
+    font-family: "CalendasPlus";
+    font-size: 1.4rem;
   }
 
   ${StyledLink} {
@@ -39,7 +39,6 @@ const About = () => {
           shops that are uniquely New England. Everything seems in its place, 
           except for a single statue of an elephant right outside Town Hall.
         </p>
-        <LocalImage src="statue.jpg" alt="elephant statue" />
         <p>Indeed, it may seem odd, yet this statue serves as a reminder of a 
           history more sordid than splendid. In the 19th & 20th centuries, the 
           U.S. was the world's biggest buyer of ivory. The bulk of that trade 
@@ -51,6 +50,7 @@ const About = () => {
           dubbed the "Queen of the Valley", due to the prosperity  of the 
           ivory industry.
         </p>
+        <LocalImage src="statue.jpg" alt="elephant statue" />
         <LocalImage src="herd-1.jpg" alt="elephant herd" />
         <p>It's a history from which Deep River doesn't hide. This dark past is 
           woven into school curriculums and taught to the future generations. 
@@ -60,12 +60,12 @@ const About = () => {
           creature as it looks forward to a new future as 'Queen of the 
           Valley.'"
         </p>
-        <LocalImage src="herd-2.jpg" alt="elephant herd" />
         <p>In keeping with our community culture, we at Deep River Soaps 
           proudly volunteer a portion of all net profits to be donated 
           to {theElephants}, the world's most successful orphan elephant 
           rescue and rehabilitation program.
         </p>
+        <LocalImage src="herd-2.jpg" alt="elephant herd" />
         <LocalImage src="squad.jpg" alt="elephant herd" />
       </AboutGrid>
     </Layout>
