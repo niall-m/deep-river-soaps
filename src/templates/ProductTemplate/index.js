@@ -45,7 +45,7 @@ export default function ProductTemplate({ data: { stripePrice } }) {
         <p>{stripePrice.product.description}</p>
         <AddToCart 
           name={stripePrice.product.name}
-          id={stripePrice.product.id}
+          id={stripePrice.id}
           price={stripePrice.unit_amount}
           currency={stripePrice.currency}
           image={stripePrice.product.localFiles[0].childImageSharp.fluid}

@@ -73,9 +73,12 @@ const DeleteButton = styled.button`
 `;
 
 const Cart = () => {
-  const { cartDetails, removeItem, setItemQuantity } = useShoppingCart();
+  const { 
+    cartDetails, totalPrice, removeItem,
+    setItemQuantity, redirectToCheckout
+  } = useShoppingCart();
 
-  const entries = [];
+  const cartEntries = [];
   for (const productId in cartDetails) {
     
     if (productId) {
@@ -83,7 +86,9 @@ const Cart = () => {
 
       const options = [];
       for (let quantity = 1; quantity <= 12; ++quantity) {
-        options.push(<option key={quantity} value={quantity}>{quantity}</option>);
+        options.push(
+          <option key={quantity} value={quantity}>{quantity}</option>
+        );
       }
       
       const formattedPrice = formatCurrencyString({ 
@@ -91,7 +96,7 @@ const Cart = () => {
         currency: 'USD' 
       });
       
-      entries.push(
+      cartEntries.push(
         <CartEntryWrapper key={productId}>
           <figure>
             <Image
@@ -133,7 +138,7 @@ const Cart = () => {
     <Layout>
     <SEO title="Cart" description="Cart page"/>
     <CartGrid>
-      {entries.length ?
+      {cartEntries.length ?
         <>
           <CartHeader>
             <h3>Product</h3>
@@ -141,7 +146,15 @@ const Cart = () => {
             <h3>Quantity</h3>
             <h3>Amount</h3>
           </CartHeader>
-          {entries}
+          {cartEntries}
+          <p>
+            Total:&nbsp; {formatCurrencyString({ 
+              value: totalPrice, currency: 'USD' 
+            })}
+          </p>
+          <button onClick={() => redirectToCheckout()}>
+            Checkout
+          </button>
         </>
         : <p>You currently don't have any items in your cart.</p>
       }

@@ -5,7 +5,7 @@ import { ProductTileWrapper, Details } from './styles';
 import { AddToCart } from 'components';
 
 export function ProductTile({ product }) {
-  const { product: item, unit_amount: unitAmount } = product;
+  const { id: priceId, product: item, unit_amount: unitAmount } = product;
 
   return (
     <ProductTileWrapper>
@@ -28,7 +28,7 @@ export function ProductTile({ product }) {
 
       <AddToCart 
         name={item.name}
-        id={item.id}
+        id={priceId}
         price={unitAmount}
         currency="USD"
         image={item.localFiles[0].childImageSharp.fluid}      
