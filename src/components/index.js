@@ -5,3 +5,4 @@ export * from './SplashBackground';
 export * from './ProductTile';
 export * from './LocalImage';
 export * from './StyledLink';
+export * from './Button';

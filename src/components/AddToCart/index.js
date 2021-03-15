@@ -1,6 +1,7 @@
 import React from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
-import { AddToCartWrapper, Input, Button } from './styles';
+import { AddToCartWrapper, Input } from './styles';
+import { Button } from 'components';
 
 export function AddToCart(props) {
   const { addItem, cartDetails } = useShoppingCart();

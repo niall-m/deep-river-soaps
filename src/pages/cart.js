@@ -3,7 +3,7 @@ import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
 import { FaTrash } from 'react-icons/fa';
-import { Layout, SEO } from 'components';
+import { Layout, SEO, Button } from 'components';
 
 const CartGrid = styled.div`
   grid-column: col-start 1 / col-end 8;
@@ -56,7 +56,7 @@ const QuantityAdder = styled.div`
   }
 `;
 
-const DeleteButton = styled.button`
+const DeleteButtonIcon = styled.button`
   border: none;
   color: var(--color-primary-dark-2);
   background-color: transparent;
@@ -126,9 +126,9 @@ const Cart = () => {
 
           <h4>{entry.formattedValue}</h4>
 
-          <DeleteButton onClick={() => removeItem(productId)}>
+          <DeleteButtonIcon onClick={() => removeItem(productId)}>
             <FaTrash size="1.4rem" />
-          </DeleteButton>
+          </DeleteButtonIcon>
         </CartEntryWrapper>
       );
     }
@@ -152,7 +152,7 @@ const Cart = () => {
                 value: totalPrice, currency: 'USD' 
               })}
             </p>
-            <button onClick={() => redirectToCheckout()}>Checkout</button>
+            <Button onClick={() => redirectToCheckout()}>Checkout</Button>
           </>
           : <p>You currently don't have any items in your cart.</p>
         }
