@@ -136,30 +136,28 @@ const Cart = () => {
 
   return (
     <Layout>
-    <SEO title="Cart" description="Cart page"/>
-    <CartGrid>
-      {cartEntries.length ?
-        <>
-          <CartHeader>
-            <h3>Product</h3>
-            <h3>Unit Price</h3>
-            <h3>Quantity</h3>
-            <h3>Amount</h3>
-          </CartHeader>
-          {cartEntries}
-          <p>
-            Total:&nbsp; {formatCurrencyString({ 
-              value: totalPrice, currency: 'USD' 
-            })}
-          </p>
-          <button onClick={() => redirectToCheckout()}>
-            Checkout
-          </button>
-        </>
-        : <p>You currently don't have any items in your cart.</p>
-      }
-    </CartGrid>
-  </Layout>
+      <SEO title="Cart" description="Cart page"/>
+      <CartGrid>
+        {cartEntries.length ?
+          <>
+            <CartHeader>
+              <h3>Product</h3>
+              <h3>Unit Price</h3>
+              <h3>Quantity</h3>
+              <h3>Amount</h3>
+            </CartHeader>
+            {cartEntries}
+            <p>
+              Total: &nbsp; {formatCurrencyString({ 
+                value: totalPrice, currency: 'USD' 
+              })}
+            </p>
+            <button onClick={() => redirectToCheckout()}>Checkout</button>
+          </>
+          : <p>You currently don't have any items in your cart.</p>
+        }
+      </CartGrid>
+    </Layout>
   );
 };
 

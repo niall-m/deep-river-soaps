@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import { TextWrapper } from './styles';
-import styled from 'styled-components';
+// import { TextWrapper } from './styles';
+// import styled from 'styled-components';
 
 // const StyledBackground = styled(BackgroundImage)`
 //   &::before,

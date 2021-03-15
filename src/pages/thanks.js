@@ -8,7 +8,7 @@ const ThanksGrid = styled.div`
 `;
 
 const ThankYouPage = () => {
-  const { clearCart, cartDetails } = useShoppingCart();
+  const { clearCart } = useShoppingCart();
 
   React.useEffect(() => {
     clearCart();
