@@ -12,13 +12,18 @@ const CartGrid = styled.div`
   grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
   grid-gap: 2rem;
   padding: 2rem 0;
+
+  > button {
+    justify-self: end;
+    width: 30%;
+  }
 `;
 
 const CartHeader = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 40px;
   justify-items: center;
-  border-bottom: 1px solid var(--color-primary-dark-2);
+  border-bottom: 2px solid var(--color-primary-dark-2);
   font-weight: bold;
 `;
 
@@ -29,6 +34,12 @@ const CartEntryWrapper = styled.div`
   align-items: center;
   font-weight: bold;
   text-align: center;
+
+  border-bottom: 1px dashed var(--color-primary-dark-2);
+
+  figcaption {
+    padding: 1rem;
+  }
 `;
 
 const QuantityAdder = styled.div`
@@ -69,6 +80,16 @@ const DeleteButtonIcon = styled.button`
 
   &:focus {
     outline: none;
+  }
+`;
+
+const Total = styled.p`
+  justify-self: end;
+  width: 30%;
+
+  > span {
+    font-size: 1rem;
+    font-weight: bold;
   }
 `;
 
@@ -147,11 +168,11 @@ const Cart = () => {
               <h3>Amount</h3>
             </CartHeader>
             {cartEntries}
-            <p>
-              Total: &nbsp; {formatCurrencyString({ 
+            <Total>
+              Total: {formatCurrencyString({ 
                 value: totalPrice, currency: 'USD' 
-              })}
-            </p>
+              })} <span>(+ shipping & tax)</span>
+            </Total>
             <Button onClick={() => redirectToCheckout()}>Checkout</Button>
           </>
           : <p>You currently don't have any items in your cart.</p>
