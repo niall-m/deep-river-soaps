@@ -65,10 +65,6 @@ const ContactGrid = styled.div`
   }
 `;
 
-const Hidden = styled.input`
-  display: none;
-`;
-
 const Contact = () => {
   return (
     <Layout>
@@ -85,7 +81,8 @@ const Contact = () => {
             netlify-honeypot="bot-field" 
             enctype="application/x-www-form-urlencoded"
           >
-            <Hidden name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <label>
               Email
               <input type="email" name="email" />
