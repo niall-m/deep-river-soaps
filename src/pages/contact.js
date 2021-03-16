@@ -75,11 +75,10 @@ const Contact = () => {
         <div>
           <h4>Inquiries? Send us a note!</h4>
           <form 
-            name="contact" 
-            method="POST" 
-            data-netlify="true"
-            netlify-honeypot="bot-field" 
-            enctype="application/x-www-form-urlencoded"
+            name="contact"
+            method="POST"
+            netlify-honeypot="bot-field"
+            netlify
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
