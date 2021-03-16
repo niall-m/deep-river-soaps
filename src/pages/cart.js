@@ -93,6 +93,11 @@ const Total = styled.p`
   }
 `;
 
+const Empty = styled.p`
+  text-align: center;
+  font-size: 3rem;
+`;
+
 const Cart = () => {
   const { 
     cartDetails, totalPrice, removeItem,
@@ -175,7 +180,7 @@ const Cart = () => {
             </Total>
             <Button onClick={() => redirectToCheckout()}>Checkout</Button>
           </>
-          : <p>You currently don't have any items in your cart.</p>
+          : <Empty>You currently don't have any items in your cart.</Empty>
         }
       </CartGrid>
     </Layout>
