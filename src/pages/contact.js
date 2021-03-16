@@ -74,7 +74,13 @@ const Contact = () => {
         <h2>Contact Us</h2>
         <div>
           <h4>Inquiries? Send us a note!</h4>
-          <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+          <form 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            netlify-honeypot="bot-field" 
+            enctype="application/x-www-form-urlencoded"
+          >
             <input type="hidden" name="bot-field" />
             <label>
               Email
