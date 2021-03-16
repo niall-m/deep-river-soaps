@@ -60,12 +60,6 @@ export const GlobalStyle = createGlobalStyle`
     --color-primary-light-2: #525983;
     --color-primary-dark-1: #252C58;
     --color-primary-dark-2: #121840;
-    
-    --color-complementary: #9D8548;
-    --color-complementary-light-1: #E9D6A7;
-    --color-complementary-light-2: #BFA86D;
-    --color-complementary-dark-1: #81682A;
-    --color-complementary-dark-2: #5D4710;
 
     --color-secondary: #9D7548;
     --color-secondary-light-1: #E9CAA7;
@@ -73,19 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-secondary-dark-1: #81582A;
     --color-secondary-dark-2: #5D3810;
     
-    --color-tertiary: #9D9348;
-    --color-tertiary-light-1: #E9E1A7;
-    --color-tertiary-light-2: #BFB56D;
-    --color-tertiary-dark-1: #81762A;
-    --color-tertiary-dark-2: #5D5310;
-
     --color-grey-light: #DCDCDC;
-
-    // responsive breakpoints
-    --bp-largest: 75em; // 1200px
-    --bp-large: 62.5em; // 1000px
-    --bp-medium: 50em; // 800px
-    --bp-small: 37.5em; // 600px
   }
   ::selection {
     background-color: var(--color-primary-dark-2);
@@ -132,6 +114,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "HandNote";
     font-size: 1.8rem;
     line-height: 2;
-    text-align: center;
   }
 `;

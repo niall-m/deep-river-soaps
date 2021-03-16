@@ -34,6 +34,7 @@ export const LeftColumn = styled.div`
 
   p { 
     padding: 1rem;
+    text-align: center;
   }
 
   @media only screen and (max-width: 50em) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, SEO, LocalImage, StyledLink } from 'components';
+import { Layout, SEO, LocalImage } from 'components';
 
 const AboutGrid = styled.div`
   grid-column: col-start 1 / col-end 8;
@@ -8,7 +8,13 @@ const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 2rem;
+  align-items: center;
   padding: 2rem 0;
+
+  h2 {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 
   > p {
     font-family: "CalendasPlus";
@@ -17,25 +23,35 @@ const AboutGrid = styled.div`
     &:last-child {
       grid-column: 1 / -1;
     }
-    > ${StyledLink} {
+
+    > a {
       text-decoration: none;
       font-weight: bold;
       color: currentColor;
     }
   }
-
 `;
 
 const About = () => {
-  const theElephants = <StyledLink to="https://www.savetheelephants.org/">
+  const saveTheElephants = <a href="https://www.savetheelephants.org/">
     Save The Elephants
-  </StyledLink>;
+  </a>;
 
   return (
     <Layout>
       <SEO title="About" description="About page"/>
 
       <AboutGrid>
+        <h2>Handmade @ Home</h2>
+        <LocalImage src="ceo.jpg" alt="soapmaker" />
+        <div>
+          <p>What started as a hobby became an obsession: to make the best soap. For myself! I was tired of dry, irritable skin, so I decided to fix it. Over the years spent searching for top quality ingredients, experimenting with ratios, cutting countless batches and waiting for them to cure, I'm proud to say we've perfected a few favorite concoctions. Every bar of soap is crafted personally by me, the C.E.O.. I get a kick out of saying that, because it's really just me and sometimes some helpers.</p>
+        </div>
+        <LocalImage src="soaps-display.jpeg" alt="soapmaker" />
+        <LocalImage src="soapbasket.jpg" alt="soapmaker" />
+
+
+        <h2>A Story of Deep River</h2>
         <LocalImage src="river.jpg" alt="Connecticut River" />
         <p>
           Quiet and quaint, tucked away in the woods by the water, 
@@ -74,7 +90,7 @@ const About = () => {
         <p>
           To honor the local community culture, and the powerful pachyderm that 
           helped to create it, we chose the elephant as our mascot and 
-          donate a portion of all net profits to {theElephants}, the world's 
+          donate a portion of all net profits to {saveTheElephants}, the world's 
           most successful orphan elephant rescue and rehabilitation program. 
           Photos taken by self on a South African safari.
         </p>

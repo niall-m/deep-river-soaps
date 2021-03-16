@@ -31,5 +31,5 @@ export const LocalImage = ({ src, ...rest }) => {
 
   const { node: { childImageSharp } = {} } = match;
   
-  return <Image fluid={childImageSharp.fluid} {...rest} />;
+  return <Image fluid={childImageSharp.fluid} style={{ borderRadius: "1rem" }} {...rest} />;
 };

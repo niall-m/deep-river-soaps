@@ -23,7 +23,7 @@ const CartHeader = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 40px;
   justify-items: center;
-  border-bottom: 2px solid var(--color-primary-dark-2);
+  border-bottom: 1px solid var(--color-primary-dark-2);
   font-weight: bold;
 `;
 
