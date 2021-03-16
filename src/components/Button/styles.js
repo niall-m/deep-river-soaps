@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  height: 100%;
   font-size: 1.4rem;
   font-family: 'AlwaysHere';
   letter-spacing: .1rem;

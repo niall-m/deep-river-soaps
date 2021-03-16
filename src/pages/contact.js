@@ -10,8 +10,13 @@ const ContactGrid = styled.div`
   grid-gap: 2rem;
   justify-items: center;
   align-items: center;
+  text-align: center;
 
   padding: 2rem 0;
+
+  @media only screen and (max-width: 37.5em) {
+    grid-template-columns: 1fr;
+  }
 
   p {
     font-family: "CalendasPlus";

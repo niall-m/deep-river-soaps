@@ -33,7 +33,6 @@ const CartHeader = styled.div`
 const CartEntryWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 40px;
-  justify-items: center;
   align-items: center;
   font-weight: bold;
   text-align: center;
@@ -46,9 +45,6 @@ const CartEntryWrapper = styled.div`
 `;
 
 const QuantityAdder = styled.div`
-  display: flex;
-  align-items: center;
-
   > select {
     padding: .5rem;
     font-family: 'AlwaysHere';
@@ -130,11 +126,7 @@ const Cart = () => {
           <figure>
             <Image
               fluid={entry.image}
-              style={{
-                borderRadius: "2rem",
-                width: "20vw",
-                height: "20vh",
-              }}
+              style={{ borderRadius: "2rem" }}
               alt={entry.name}
             />
             <figcaption>{entry.name}</figcaption>

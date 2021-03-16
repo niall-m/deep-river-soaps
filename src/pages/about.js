@@ -8,8 +8,13 @@ const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 2rem;
-  align-items: center;
   padding: 2rem 0;
+  align-items: center;
+  text-align: center;
+
+  @media only screen and (max-width: 37.5em) {
+    grid-template-columns: 1fr;
+  }
 
   h2 {
     grid-column: 1 / -1;
