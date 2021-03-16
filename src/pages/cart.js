@@ -15,7 +15,10 @@ const CartGrid = styled.div`
 
   > button {
     justify-self: end;
-    width: 30%;
+
+    @media only screen and (min-width: 50em) {
+      width: 30%;
+    }
   }
 `;
 

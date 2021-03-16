@@ -4,6 +4,10 @@ import { Layout, SEO } from 'components';
 
 const ErrorPageGrid = styled.div`
   grid-column: col-start 1 / col-end 8;
+
+  p {
+    text-align: center;
+  }
 `;
 
 const ErrorPage = () => {

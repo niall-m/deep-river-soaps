@@ -5,6 +5,10 @@ import { useShoppingCart } from 'use-shopping-cart';
 
 const ThanksGrid = styled.div`
   grid-column: col-start 1 / col-end 8;
+
+  p {
+    text-align: center;
+  }
 `;
 
 const ThankYouPage = () => {

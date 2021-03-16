@@ -8,7 +8,7 @@ export function CartIcon() {
 
   return (
     <CartWrapper>
-      <h4>{cartCount}</h4>
+      <h4>{cartCount > 0 ? cartCount : null}</h4>
       <FaShoppingCart />
     </CartWrapper>
   );

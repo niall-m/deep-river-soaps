@@ -10,7 +10,7 @@ export const AddToCartWrapper = styled.div`
 
 export const Input = styled.input`
   height: 3rem;
-  width: 5rem;
+  width: 3rem;
   font-size: 2rem;
   font-family: 'AlwaysHere';
   font-weight: bold;
