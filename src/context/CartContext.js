@@ -9,8 +9,8 @@ export function CartContextProvider({ children }) {
     <CartProvider
       mode="client-only"
       stripe={stripePromise}
-      successUrl={`http://localhost:8000/thanks`}
-      cancelUrl={`http://localhost:8000/error`}
+      successUrl={`https://www.deepriversoaps.com/thanks`}
+      cancelUrl={`https://www.deepriversoaps.com/error`}
       currency="USD"
       allowedCountries={['US', 'CA']}
       billingAddressCollection={true}
