@@ -84,7 +84,6 @@ const DeleteButtonIcon = styled.button`
 
 const Total = styled.p`
   justify-self: end;
-  width: 30%;
 
   > span {
     font-size: 1rem;

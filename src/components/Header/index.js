@@ -10,8 +10,8 @@ export function Header() {
       <Logo />
 
       <ul>
-        <li><StyledLink to={"/about"}>About</StyledLink></li>
         <li><StyledLink to={"/soaps"}>Soaps</StyledLink></li>
+        <li><StyledLink to={"/about"}>About</StyledLink></li>
         <li><StyledLink to={"/contact"}>Contact</StyledLink></li>
         <li><CartIcon /></li>
       </ul>
