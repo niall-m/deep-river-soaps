@@ -155,29 +155,33 @@ const Cart = () => {
   }
 
   return (
-    <Layout>
-      <SEO title="Cart" description="Cart page"/>
-      <CartGrid>
-        {cartEntries.length ?
-          <>
-            <CartHeader>
-              <h3>Product</h3>
-              <h3>Unit Price</h3>
-              <h3>Quantity</h3>
-              <h3>Amount</h3>
-            </CartHeader>
-            {cartEntries}
-            <Total>
-              Total: {formatCurrencyString({ 
-                value: totalPrice, currency: 'USD' 
-              })} <span>(+ shipping & tax)</span>
-            </Total>
-            <Button onClick={() => redirectToCheckout()}>Checkout</Button>
-          </>
-          : <Empty>You currently don't have any items in your cart.</Empty>
-        }
-      </CartGrid>
-    </Layout>
+    <div style={{ textAlign: "center" }}>
+      <h2>Site is currently under construction.</h2>
+      <h3>Please email sjrooney@gmail.com for orders!</h3>
+    </div>
+    // <Layout>
+    //   <SEO title="Cart" description="Cart page"/>
+    //   <CartGrid>
+    //     {cartEntries.length ?
+    //       <>
+    //         <CartHeader>
+    //           <h3>Product</h3>
+    //           <h3>Unit Price</h3>
+    //           <h3>Quantity</h3>
+    //           <h3>Amount</h3>
+    //         </CartHeader>
+    //         {cartEntries}
+    //         <Total>
+    //           Total: {formatCurrencyString({ 
+    //             value: totalPrice, currency: 'USD' 
+    //           })} <span>(+ shipping & tax)</span>
+    //         </Total>
+    //         <Button onClick={() => redirectToCheckout()}>Checkout</Button>
+    //       </>
+    //       : <Empty>You currently don't have any items in your cart.</Empty>
+    //     }
+    //   </CartGrid>
+    // </Layout>
   );
 };
 
