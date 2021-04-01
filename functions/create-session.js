@@ -14,7 +14,6 @@ exports.handler = async event => {
       line_items[item].tax_rates = ['txr_1IbF4GH63NiWM9A3AFG4baa9'];
     }
 
-    console.log(line_items);
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
