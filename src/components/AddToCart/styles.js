@@ -25,3 +25,33 @@ export const Input = styled.input`
     background-color: var(--color-primary-dark-1);
   }
 `;
+
+export const ShowAmount = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    line-height: 1;
+    font-size: 1.4rem;
+  }
+
+  > svg { 
+    height: 2rem;
+    width: 2rem;
+    transition: all .1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    @media only screen and (max-width: 50em) {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+`;

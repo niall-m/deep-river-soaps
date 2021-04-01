@@ -104,7 +104,7 @@ const Contact = () => {
         </div>
         <div>
           <h3>Ordering Information:</h3>
-          <p>We charge a flat shipping rate of $7 on all orders.</p>
+          <p>We charge a flat shipping rate of $8 on all orders.</p>
           <p>Typically arrives in 5-8 business days.</p>
           <hr />
           <h3>Bulk orders:</h3>

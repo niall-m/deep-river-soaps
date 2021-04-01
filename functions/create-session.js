@@ -10,9 +10,9 @@ exports.handler = async event => {
 
     const line_items = validateCartItems(inventory, productJSON);
 
-    for (let item in line_items) {
-      line_items[item].tax_rates = ['txr_1IbF4GH63NiWM9A3AFG4baa9'];
-    }
+    line_items.forEach(item => {
+      item.tax_rates = ['txr_1IbF4GH63NiWM9A3AFG4baa9'];
+    });
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",

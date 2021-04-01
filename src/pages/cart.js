@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart';
-import { FaTrash } from 'react-icons/fa';
+import { MdRemoveShoppingCart } from 'react-icons/md';
 import { Layout, SEO, Button } from 'components';
 
 const CartGrid = styled.div`
@@ -42,11 +42,30 @@ const CartEntryWrapper = styled.div`
   figcaption {
     padding: 1rem;
   }
+
+  > svg { 
+    height: 2rem;
+    width: 2rem;
+    transition: all .1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    @media only screen and (max-width: 50em) {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
 `;
 
 const QuantityAdder = styled.div`
   > select {
-    padding: .5rem;
+    padding: 1rem;
     font-family: 'AlwaysHere';
     font-size: 2rem;
     font-weight: bold;
@@ -63,22 +82,6 @@ const QuantityAdder = styled.div`
       font-size: 1.2rem;
       padding: .2rem;
     }
-  }
-`;
-
-const DeleteButtonIcon = styled.button`
-  border: none;
-  color: var(--color-primary-dark-2);
-  background-color: transparent;
-  cursor: pointer;
-  transition: all .1s;
-
-  &:active {
-    transform: scale(.9);
-  }
-
-  &:focus {
-    outline: none;
   }
 `;
 
@@ -134,7 +137,7 @@ const Cart = () => {
             <figcaption>{entry.name}</figcaption>
           </figure>
 
-          <h4>{formattedPrice}</h4>
+          <h3>{formattedPrice}</h3>
           
           <QuantityAdder>
             <select
@@ -147,11 +150,12 @@ const Cart = () => {
             </select>
           </QuantityAdder>
 
-          <h4>{entry.formattedValue}</h4>
+          <h3>{entry.formattedValue}</h3>
 
-          <DeleteButtonIcon onClick={() => removeItem(productId)}>
-            <FaTrash size="1.4rem" />
-          </DeleteButtonIcon>
+          <MdRemoveShoppingCart 
+            title="Remove from cart"
+            onClick={() => removeItem(productId)}            
+          />
         </CartEntryWrapper>
       );
     }
@@ -160,17 +164,21 @@ const Cart = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // create stripe checkout session with serverless netlify cloud function
     const response = await fetch('/.netlify/functions/create-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(cartDetails)
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .catch((error) => console.log(error));
+    });
 
-    redirectToCheckout({ sessionId: response.sessionId });
+    if (response.status >= 200 && response.status <= 299) {
+      const jsonResponse = await response.json();
+      redirectToCheckout({ sessionId: jsonResponse.sessionId });
+    } else {
+      // Handle errors
+      console.log(response.status, response.statusText);
+      alert(response.statusText);
+    }
   };
   
   return (
@@ -188,7 +196,7 @@ const Cart = () => {
             {cartEntries}
             <Total>
               Total: {formatCurrencyString({ 
-                value: totalPrice, currency: 'USD' 
+                value: totalPrice, currency: 'USD'
               })} <span>(+ shipping & tax)</span>
             </Total>
             <Button onClick={handleSubmit}>Checkout</Button>
