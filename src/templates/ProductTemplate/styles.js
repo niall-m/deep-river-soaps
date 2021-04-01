@@ -32,7 +32,7 @@ export const LeftColumn = styled.div`
 
   padding: 1rem;
 
-  p { 
+  > p { 
     padding: 1rem;
     text-align: center;
   }
