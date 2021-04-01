@@ -5,8 +5,8 @@ import { AddToCartWrapper, Input, ShowAmount } from './styles';
 import { Button } from 'components';
 
 export function AddToCart(props) {  
-  const { addItem, removeItem, cartDetails } = useShoppingCart();
-  const [quantity, setQuantity] = React.useState(1);
+  const { addItem, removeItem, setItemQuantity, cartDetails } = useShoppingCart();
+  const [inputValue, setInputValue] = React.useState(1);
   const [amountInCart, setAmountInCart] = React.useState(
     cartDetails[props.id] ? cartDetails[props.id].quantity : null
   );
@@ -16,7 +16,15 @@ export function AddToCart(props) {
   }, [cartDetails, props.id]);
 
   const handleChange = (e) => {
-    setQuantity(parseInt(e.currentTarget.value), 10);
+    setInputValue(parseInt(e.currentTarget.value, 10));
+  };
+
+  const handleAddToCart = () => {
+    if (inputValue + cartDetails[props.id]?.quantity >= 12) {
+      setItemQuantity(props.id, 12);
+    } else {
+      addItem(props, inputValue);
+    }
   };
 
   const showAmountInCart = () => {
@@ -41,10 +49,10 @@ export function AddToCart(props) {
         min="1" 
         max="12"
         step="1" 
-        value={quantity} 
+        value={inputValue} 
         onChange={handleChange}
       />
-      <Button onClick={() => addItem(props, quantity)}>
+      <Button onClick={handleAddToCart}>
         Add to cart
       </Button>
       {showAmountInCart()}
