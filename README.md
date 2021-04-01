@@ -97,3 +97,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3e31906e-e440-4c75-aefd-6345c26d57df/deploy-status)](https://app.netlify.com/sites/inspiring-poincare-549496/deploys)

@@ -21,19 +21,15 @@ const Soaps = () => {
   const { products } = React.useContext(ProductContext);
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h2>Site is currently under construction.</h2>
-      <h3>Please email sjrooney@gmail.com for orders!</h3>
-    </div>
-    // <Layout>
-    //   <SEO title="Soaps" description="All soap products page"/>
+    <Layout>
+      <SEO title="Soaps" description="All soap products page"/>
 
-    //   <SoapsGrid>
-    //     {products.map(node => (
-    //       <ProductTile product={node} key={node.product.id} />
-    //     ))}
-    //   </SoapsGrid>
-    // </Layout>
+      <SoapsGrid>
+        {products.map(node => (
+          <ProductTile product={node} key={node.product.id} />
+        ))}
+      </SoapsGrid>
+    </Layout>
   );
 };
 
