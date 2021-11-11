@@ -57,7 +57,6 @@ const About = () => {
 
 
         <h2>A Story of Deep River</h2>
-        <LocalImage src="river.jpg" alt="Connecticut River" />
         <p>
           Quiet and quaint, tucked away in the woods by the water, 
           Deep River is classic Connecticut. A sense of community, respect 
