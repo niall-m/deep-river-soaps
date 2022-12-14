@@ -1,44 +1,62 @@
 [
   {
+    "name": "Wild Boy",
+    "id": "price_1K4sglH63NiWM9A3zA0ugipH",
+    "price": 700,
+    "currency": "USD"
+  },
+  {
+    "name": "Lemon Salt Bar",
+    "id": "price_1K4rkiH63NiWM9A3jS4rTAD6",
+    "price": 700,
+    "currency": "USD"
+  },
+  {
+    "name": "Watermelon Salt Bar",
+    "id": "price_1JZNNBH63NiWM9A3CrPF5p4N",
+    "price": 700,
+    "currency": "USD"
+  },
+  {
     "name": "Pumpkin Honey",
-    "id": "price_1IXsxQH63NiWM9A31NLPRrp1",
-    "price": 600,
+    "id": "price_1MF0nAH63NiWM9A3ZEkdxrrT",
+    "price": 700,
     "currency": "USD"
   },
   {
     "name": "Peppermint",
     "id": "price_1IXswoH63NiWM9A35h0zONPw",
-    "price": 600,
+    "price": 700,
     "currency": "USD"
   },
   {
     "name": "Morning Joe",
-    "id": "price_1IXswUH63NiWM9A3Q4U5bTO8",
-    "price": 600,
+    "id": "price_1MF0omH63NiWM9A3XEyZmzVT",
+    "price": 700,
     "currency": "USD"
   },
   {
     "name": "Goat's Milk",
-    "id": "price_1IXsvAH63NiWM9A37G7E960I",
-    "price": 600,
+    "id": "price_1MF0pXH63NiWM9A3wDK7DoHW",
+    "price": 700,
     "currency": "USD"
   },
   {
     "name": "Lovespell",
     "id": "price_1IXstBH63NiWM9A3ebwINWbO",
-    "price": 600,
+    "price": 700,
     "currency": "USD"
   },
   {
     "name": "Lavendar",
-    "id": "price_1IXsslH63NiWM9A3lRbDNROx",
-    "price": 600,
+    "id": "price_1MF0qMH63NiWM9A3h7Ggpd1Q",
+    "price": 700,
     "currency": "USD"
   },
   {
     "name": "Honeysuckle Rose",
-    "id": "price_1IXssGH63NiWM9A350KU3Iyq",
-    "price": 600,
+    "id": "price_1MF0qsH63NiWM9A3ZIeIlZz4",
+    "price": 700,
     "currency": "USD"
   },
   {
@@ -49,8 +67,8 @@
   },
   {
     "name": "Coconut Lemon",
-    "id": "price_1IXsqxH63NiWM9A39eFeuZ6Q",
-    "price": 600,
+    "id": "price_1MF0s7H63NiWM9A3nWtZZ0jb",
+    "price": 700,
     "currency": "USD"
   }
 ]
