@@ -5,7 +5,7 @@ import { Header } from '../Header';
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
-      <Header />
+      {/* <Header /> */}
       <Grid>{children}</Grid>
     </LayoutWrapper>
   );

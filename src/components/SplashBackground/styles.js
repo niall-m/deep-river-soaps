@@ -26,4 +26,13 @@ export const IndexLinkWrapper = styled.div`
       transform: scale(1.1);
     }
   }
+
+  & div {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `;

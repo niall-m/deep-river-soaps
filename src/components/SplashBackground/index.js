@@ -27,7 +27,11 @@ export const SplashBackground = () => {
       }}
     >
       <IndexLinkWrapper>
-        <StyledLink to={'/soaps'}>Shop Now</StyledLink>
+        <div>
+          <h4>currently whipping up new batches!</h4>
+          <p>be back soon...</p>
+        </div>
+        {/* <StyledLink to={'/soaps'}>Shop Now</StyledLink> */}
       </IndexLinkWrapper>
     </BackgroundImage>
   );
